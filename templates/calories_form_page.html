@@ -1,34 +1,33 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Title</title>
+    <link rel="stylesheet" href="static/main.css">
 </head>
 <body>
-<h2>Calorie Calculator</h2>
-<p>Fill in the form and click submit</p>
+<h2>Calories Calculation Form</h2>
+<p>Fill in the form and click the button to know how many calories you need!</p>
 <form action="/calories_form" method="post">
-    <p>let's get some info</p>
+    <p>Let's get some info about you first.</p>
     {{caloriesform.weight.label}} {{caloriesform.weight}}
     <br>
-    {{calories.height.label}} {{caloriesform.height}}
+    {{caloriesform.height.label}} {{caloriesform.height}}
     <br>
-    {{caloriesform.age.label}} {{calories.age}}
+    {{caloriesform.age.label}} {{caloriesform.age}}
     <br>
     <hr>
-    <p>Tell us where you are so we can better calculate your need calories</p>
+    <p>Today's weather counts too. <br> Tell us where you are so we include today's temperature into the calculations.</p>
     {{caloriesform.city.label}} {{caloriesform.city}}
     <br>
     {{caloriesform.country.label}} {{caloriesform.country}}
     <br>
+
     <br>
     {{caloriesform.button}}
     <br>
     {% if result==True %}
-    <h3>You need {{calories}} calories today</h3>
+    <h3>You need {{calories}} calories (kcal) today</h3>
     {% endif %}
 </form>
 </body>

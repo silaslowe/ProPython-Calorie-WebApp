@@ -37,6 +37,6 @@ class Temperature:
         return float(scrapped_content['temp'].replace("\xa0°F", ""))
 
 
-if __name__ == "__main__":
-    temperature = Temperature("usa", "nashville")
-    print(temperature.get())
+# if __name__ == "__main__":
+#     temperature = Temperature("usa", "nashville")
+#     print(temperature.get())

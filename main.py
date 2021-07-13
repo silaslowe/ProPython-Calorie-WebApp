@@ -18,7 +18,7 @@ class CaloriesFormPage(MethodView):
     def get(self):
         calories_form = CaloriesForm()
 
-        return render_template('calories_form', caloriesform=calories_form)
+        return render_template('calories_form_page.html', caloriesform=calories_form)
 
     def post(self):
         calories_form = CaloriesForm(request.form)
@@ -42,8 +42,8 @@ class CaloriesForm(Form):
     weight = StringField("Weight: ", default=70)
     height = StringField("Height: ", default=175)
     age = StringField("Age: ", default=99)
-    country = StringField("Country: ", default='USA')
-    city = StringField('City: ', default='Nashville')
+    country = StringField("Country: ", default='usa')
+    city = StringField('City: ', default='nashville')
     button = SubmitField("Calculate")
 
 
